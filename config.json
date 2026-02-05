@@ -1,190 +1,54 @@
 {
   "name": "CineChase 播放源",
   "description": "多源聚合配置",
-  "version": "1.0",
+  "notification": "部分源需要特定地区 IP",
+  "host": "https://api.olelive.com/",
   "pages": [
     {
-      "key": "featured",
-      "title": "推薦",
-      "sources": ["埋堆堆", "新廠長", "量子資源"]
+      "key": "index",
+      "title": "首頁",
+      "url": "https://api.olelive.com/v1/pub/vod/newest/${pageNumber}/12",
+      "timeout": 20
     },
     {
       "key": "movie",
       "title": "電影",
-      "type_id": "1"
+      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/1/0/0/update/${pageNumber}/48",
+      "timeout": 20
     },
     {
-      "key": "tv",
-      "title": "連續劇",
-      "type_id": "2"
+      "key": "shows",
+      "title": "连续剧",
+      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/2/0/0/update/${pageNumber}/48",
+      "timeout": 20
+    },
+    {
+      "key": "shorts",
+      "title": "短劇",
+      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/14/0/0/update/${pageNumber}/48",
+      "timeout": 20
     },
     {
       "key": "variety",
-      "title": "綜藝",
-      "type_id": "3"
+      "title": "综艺",
+      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/3/0/0/update/${pageNumber}/48",
+      "timeout": 20
     },
     {
       "key": "anime",
-      "title": "動漫",
-      "type_id": "4"
+      "title": "动漫",
+      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/4/0/0/update/${pageNumber}/48",
+      "timeout": 20
     }
   ],
-  "sources": [
-    {
-      "id": "749efa89-d429-4a4e-8295-6ae9e01226d4",
-      "name": "埋堆堆",
-      "description": "粤语港剧社区平台",
-      "api": "Syncnext://MDD",
-      "top": true,
-      "searchable": true
-    },
-    {
-      "id": "7e3cb2a3-8a84-4dc9-8ba7-8d9a0071aee1",
-      "name": "AGE 動漫",
-      "description": "海量動漫",
-      "api": "Syncnext://AGE",
-      "top": false,
-      "searchable": false
-    },
-    {
-      "id": "51795039-3995-4fbf-ba54-74af68780ae3",
-      "name": "新歐樂影院",
-      "description": "海外 IP 無廣告",
-      "notification": "阻擋中國地區訪問",
-      "api": "syncnextPlugin://https://raw.githubusercontent.com/qoli/syncnextPlugin/main/plugin_olevod/config.json",
-      "cover": "https://i.ibb.co/TK0pFjL/image.png",
-      "top": false,
-      "searchable": true
-    },
-    {
-      "id": "2a9c1b36-c401-8019-b2cb-c80aec1a5fd3",
-      "name": "新廠長",
-      "description": "要求大陸 IP",
-      "api": "syncnextPlugin://https://raw.githubusercontent.com/qoli/syncnextPlugin/main/plugin_czzy/config.json",
-      "top": true,
-      "searchable": true
-    },
-    {
-      "id": "b70ab3a8-3e84-43a2-9c09-9334129a740d",
-      "name": "量子資源",
-      "description": "無貼片，插入式廣告",
-      "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/xml/",
-      "top": true,
-      "searchable": true,
-      "priority": 500001
-    },
-    {
-      "id": "63915be4-a346-4b9b-89b5-404d030f4dfe",
-      "name": "非凡资源",
-      "api": "http://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/at/xml/",
-      "top": false,
-      "searchable": true,
-      "priority": 500002
-    },
-    {
-      "id": "61fea163-cf79-4c86-9c87-ba995d85aba1",
-      "name": "光速资源",
-      "description": "720P 文字貼片 1.8M",
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/at/xml",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "1b8ffce4-daf3-4c71-9591-1427c28cac88",
-      "name": "U酷资源",
-      "description": "720P 文字貼片 0.85M",
-      "api": "https://api.ukuapi.com/api.php/provide/vod/from/ukm3u8/at/xml",
-      "top": false,
-      "searchable": true,
-      "priority": 500006
-    },
-    {
-      "id": "96000fba-e1f6-4144-8189-e95351629dd0",
-      "name": "百度资源",
-      "description": "720P 貼片，不支持搜尋",
-      "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/at/xml/",
-      "top": false,
-      "searchable": false,
-      "priority": 510000
-    },
-    {
-      "id": "bcf11cb4-8b9c-4a6a-a62d-c99796bfffb4",
-      "name": "暴风资源",
-      "description": "720P，大陸IP",
-      "api": "https://bfzyapi.com/api.php/provide/vod/at/xml/",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "1e72459c-3b38-4cbc-90e4-b7176b8fae66",
-      "name": "魔都资源",
-      "description": "1080P 1.5M，文字貼片",
-      "api": "https://www.moduzy.com/api.php/provide/vod/at/xml/",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "89920f8d-7535-44d4-963c-b0c974367624",
-      "name": "索尼资源网",
-      "description": "1080P，1M",
-      "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/at/xml/",
-      "top": false,
-      "searchable": false,
-      "priority": 510000
-    },
-    {
-      "id": "d8432d7d-d5ca-4030-862e-21e656909fa9",
-      "name": "闪电资源",
-      "description": "1080P，1.5M",
-      "api": "http://sdzyapi.com/api.php/provide/vod/at/xml/",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "a69fb967-f49d-4316-8cb7-84dbdd0467c2",
-      "name": "极速资源",
-      "api": "https://jszyapi.com/api.php/provide/vod/at/xml/from/jsm3u8",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "f85e5f84-c38e-436b-b325-49e71dff69ec",
-      "name": "火狐资源",
-      "api": "https://hhzyapi.com/api.php/provide/vod/at/xml/from/hhm3u8",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "bae1a383-2ae6-44cb-8470-84c815514f61",
-      "name": "快播资源",
-      "api": "https://caiji.kczyapi.com/api.php/provide/vod/at/xml/from/kcm3u8",
-      "top": false,
-      "searchable": true,
-      "priority": 510000
-    },
-    {
-      "id": "996be072-a8cf-4aaf-85d9-ab65c8257185",
-      "name": "金鹰资源",
-      "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/at/xml/",
-      "top": false,
-      "searchable": false
-    },
-    {
-      "id": "2a9c1b36-c401-80ed-a2c3-f413c0ca7b7e",
-      "name": "电影天堂资源",
-      "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/at/json/",
-      "top": false,
-      "searchable": false
-    }
-  ],
+  "episodes": {
+    "timeout": 20
+  },
+  "player": {
+    "timeout": 20
+  },
   "search": {
     "timeout": 20,
-    "placeholder": "搜索電影、電視劇..."
+    "url": "https://api.olelive.com/v1/pub/index/search/${keyword}/vod/0/1/4"
   }
 }
