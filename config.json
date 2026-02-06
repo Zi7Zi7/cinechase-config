@@ -29,5 +29,25 @@
     "extra": {
       "gfw": false
     }
+  },
+  {
+    "id": "ikunziyuan",
+    "name": "ikun资源",
+    "api": "https://ikunzyapi.com/api.php/provide/vod",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "1080ziyuan",
+    "name": "1080资源",
+    "api": "https://api.1080zyku.com/inc/apijson.php",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
   }
 ]
