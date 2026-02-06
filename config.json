@@ -1,54 +1,142 @@
-{
-  "name": "CineChase 播放源",
-  "description": "多源聚合配置",
-  "notification": "部分源需要特定地区 IP",
-  "host": "https://api.olelive.com/",
-  "pages": [
-    {
-      "key": "index",
-      "title": "首頁",
-      "url": "https://api.olelive.com/v1/pub/vod/newest/${pageNumber}/12",
-      "timeout": 20
-    },
-    {
-      "key": "movie",
-      "title": "電影",
-      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/1/0/0/update/${pageNumber}/48",
-      "timeout": 20
-    },
-    {
-      "key": "shows",
-      "title": "连续剧",
-      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/2/0/0/update/${pageNumber}/48",
-      "timeout": 20
-    },
-    {
-      "key": "shorts",
-      "title": "短劇",
-      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/14/0/0/update/${pageNumber}/48",
-      "timeout": 20
-    },
-    {
-      "key": "variety",
-      "title": "综艺",
-      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/3/0/0/update/${pageNumber}/48",
-      "timeout": 20
-    },
-    {
-      "key": "anime",
-      "title": "动漫",
-      "url": "https://api.olelive.com/v1/pub/vod/list/true/3/0/0/4/0/0/update/${pageNumber}/48",
-      "timeout": 20
+[
+  {
+    "id": "liangziziyuan",
+    "name": "量子資源",
+    "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
     }
-  ],
-  "episodes": {
-    "timeout": 20
   },
-  "player": {
-    "timeout": 20
+  {
+    "id": "feifanziyuan",
+    "name": "非凡资源",
+    "api": "http://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
   },
-  "search": {
-    "timeout": 20,
-    "url": "https://api.olelive.com/v1/pub/index/search/${keyword}/vod/0/1/4"
+  {
+    "id": "guangsuziyuan",
+    "name": "光速资源",
+    "api": "https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "ukuziyuan",
+    "name": "U酷资源",
+    "api": "https://api.ukuapi.com/api.php/provide/vod/from/ukm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "baiduziyuan",
+    "name": "百度资源",
+    "api": "https://api.apibdzy.com/api.php/provide/vod/from/dbm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "baofengziyuan",
+    "name": "暴风资源",
+    "api": "https://bfzyapi.com/api.php/provide/vod/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": true
+    }
+  },
+  {
+    "id": "moduziyuan",
+    "name": "魔都资源",
+    "api": "https://www.moduzy.com/api.php/provide/vod/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "suoniziyuan",
+    "name": "索尼资源网",
+    "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "shandianziyuan",
+    "name": "闪电资源",
+    "api": "http://sdzyapi.com/api.php/provide/vod/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "jisuziyuan",
+    "name": "极速资源",
+    "api": "https://jszyapi.com/api.php/provide/vod/at/xml/from/jsm3u8",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "huohuziyuan",
+    "name": "火狐资源",
+    "api": "https://hhzyapi.com/api.php/provide/vod/at/xml/from/hhm3u8",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "kuaiboziyuan",
+    "name": "快播资源",
+    "api": "https://caiji.kczyapi.com/api.php/provide/vod/at/xml/from/kcm3u8",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "jinyingziyuan",
+    "name": "金鹰资源",
+    "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/at/xml",
+    "nsfw": false,
+    "type": 0,
+    "extra": {
+      "gfw": false
+    }
+  },
+  {
+    "id": "dianyingtianziyuan",
+    "name": "电影天堂资源",
+    "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/from/dyttm3u8/at/json",
+    "nsfw": false,
+    "type": 1,
+    "extra": {
+      "gfw": false
+    }
   }
-}
+]
